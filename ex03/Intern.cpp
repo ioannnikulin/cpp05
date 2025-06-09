@@ -3,6 +3,9 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
+using std::cout;
+using std::endl;
+
 const string Intern::AVAILABLE_FORMS_NAMES[] = {
 	"shrubbery creation"
 	, "robotomy request"
@@ -48,5 +51,6 @@ AForm* Intern::makeForm(string name, string target) {
 			return ((this->*AVAILABLE_FORMS_CONSTRUCTORS[i])(target));
 		}
 	}
+	cout << "No form named '" << name << "'" << endl;
 	return (0);
 }
