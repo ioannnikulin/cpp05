@@ -16,7 +16,7 @@ int main() {
 		Form f("Tariffs", 1, 120);
 		assert(false == f.isSigned());
 		d.signForm(f);
-		assert(true == f.isSigned());
+		assert(f.isSigned());
 	}
 	try {
 		Bureaucrat e("Elon", 50);

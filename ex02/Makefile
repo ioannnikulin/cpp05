@@ -1,11 +1,15 @@
 CPP = c++
 COMPILE_FLAGS = -Wall -Werror -Wextra -pedantic -g -c -std=c++98
 LINK_FLAGS =
-NAME = Bureaucrat
+NAME = Forms
 
 SRCS = \
 	main.cpp \
-	Bureaucrat.cpp
+	Bureaucrat.cpp \
+	AForm.cpp \
+	ShrubberyCreationForm.cpp \
+	RobotomyRequestForm.cpp \
+	PresidentialPardonForm.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -18,7 +22,7 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) *_shrubbery
 
 fclean: clean
 	rm -rf $(NAME)
