@@ -12,10 +12,13 @@ class AForm;
 class Bureaucrat {
 private:
 	const string _name;
+	static const string DEFAULT_NAME;
 	int _grade;
 	static const int LOWEST_GRADE = 150;
+	static const int DEFAULT_GRADE = LOWEST_GRADE + 1;
 	static const int HIGHEST_GRADE = 1;
 
+	Bureaucrat();
 	Bureaucrat(const Bureaucrat &other);
 	Bureaucrat &operator=(const Bureaucrat &other);
 	void setGrade(int grade);

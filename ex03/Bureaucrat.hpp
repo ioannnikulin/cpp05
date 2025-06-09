@@ -7,7 +7,7 @@ using std::string;
 using std::exception;
 using std::ostream;
 
-class Form;
+class AForm;
 
 class Bureaucrat {
 private:
@@ -15,8 +15,8 @@ private:
 	static const string DEFAULT_NAME;
 	int _grade;
 	static const int LOWEST_GRADE = 150;
-	static const int DEFAULT_GRADE = LOWEST_GRADE + 1;
 	static const int HIGHEST_GRADE = 1;
+	static const int DEFAULT_GRADE = LOWEST_GRADE - 1;
 
 	Bureaucrat();
 	Bureaucrat(const Bureaucrat &other);
@@ -33,7 +33,8 @@ public:
 	void incrementGrade();
 	void decrementGrade();
 
-	void signForm(Form &f) const;
+	void signForm(AForm &f) const;
+	void executeForm(AForm const &f) const;
 
 	class GradeTooHighException : public exception {
 	public:

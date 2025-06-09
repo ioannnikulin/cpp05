@@ -1,5 +1,14 @@
 #include "Form.hpp"
 
+const string Form::DEFAULT_NAME = "Form";
+
+Form::Form():
+	_name(DEFAULT_NAME)
+	, _signGrade(DEFAULT_SIGN_GRADE)
+	, _execGrade(DEFAULT_EXEC_GRADE)
+{
+}
+
 Form::Form(const string &name, int signGrade, int execGrade): 
 	_name(name)
 	, _isSigned(false)

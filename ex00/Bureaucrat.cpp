@@ -1,5 +1,13 @@
 #include "Bureaucrat.hpp"
 
+const string Bureaucrat::DEFAULT_NAME = "Richard";
+
+Bureaucrat::Bureaucrat():
+	_name(DEFAULT_NAME)
+	, _grade(DEFAULT_GRADE)
+{
+}
+
 Bureaucrat::Bureaucrat(const string &name, int grade): 
 	_name(name)
 {
